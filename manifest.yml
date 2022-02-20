@@ -1,0 +1,10 @@
+
+applications:
+    - name: hack-xp
+      command: node index.js
+      instances: 1
+      routes:
+      random-route: true
+      memory: 64M
+      env:
+        LOCATION: 'IBM Cloud'
