@@ -1,9 +1,10 @@
-
 applications:
-    - name: hack-xp
+    - name: hack-api
+      path: ./
       command: node index.js
       instances: 1
       routes:
+        - route: hack-api-proud-marmot-hr.mybluemix.net
       random-route: true
       memory: 64M
       env:

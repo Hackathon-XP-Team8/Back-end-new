@@ -6,12 +6,12 @@ var cors = require('cors')
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT;
+const port = (process.env.PORT || 3333);
 const mongo = process.env.MONGO;
 
 app.use(cors());
 
-mongoose.connect(mongo, {
+mongoose.connect('mongodb+srv://Womakers:Womakers@cluster0.elgva.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology:  true
 });
