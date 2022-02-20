@@ -9,7 +9,7 @@ const app = express();
 const port = (process.env.PORT || 3333);
 const mongo = process.env.MONGO;
 
-app.use(cors());
+app.use(cors({origin: 'http://127.0.0.1:5500/'}));
 
 mongoose.connect('mongodb+srv://Womakers:Womakers@cluster0.elgva.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
